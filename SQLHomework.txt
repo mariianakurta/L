@@ -1,0 +1,20 @@
+1. select * from Sales.Customer;
+
+2. select * from Sales.Store order by Name;
+
+3. select * from HumanResources.Employee where BirthDate > '1989-09-28' fetch first 10 rows only;
+
+4. select NationalIDNumber, LoginID, JobTitle from HumanResources.Employee where right(LoginID, 1) = '0' order by JobTitle;
+
+5. select * from Person.Person where year(ModifiedDate) = 2008 AND MiddleName is not null and Title is null;
+
+6. select distinct d.name from HumanResources.EmployeeDepartmentHistory edh inner join HumanResources.Department d on edh.DepartmentID = d.DepartmentID;
+
+7. select TerritoryID, MAX(CommissionPct) as MaxCommissionPct from Sales.SalesPerson where CommissionPct > 0 group by TerritoryID;
+
+8. select top 1 * from HumanResources.Employee order by VacationHours desc;
+
+9. select * from HumanResources.Employee where JobTitle in ('Sales Representative', 'Network Administrator', 'Network Manager');
+
+
+
