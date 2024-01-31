@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .container {
+      width: 80%; 
+    }
+
+    .holder {
+      display: flex;
+    }
+
+    .left {
+      width: 50%;
+      padding: 20px;
+    }
+
+    .right {
+      width: 50%;
+      padding: 20px;
+    }
+
+    .list a[href^="https"] {
+      color: red;
+    }
+
+    .list li:last-child a {
+      background-color: green;
+    }
+
+    .list + p {
+      font-size: 26px;
+    }
+
+    .holder:hover .list a[href^="https"]:hover {
+      background-color: pink;
+      color: black;
+    }
+
+    .holder:hover .list li:last-child a:hover {
+      background-color: lightgreen;
+      color: black;
+    }
+
+    .holder:hover .list + p:hover {
+      background-color: lightblue;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="holder">
+      <div class="left">
+        <ul class="list">
+          <li>
+            <a href="#">link1</a>
+            <ul>
+              <li><a href="#">link2</a></li>
+              <li><a href="#">link3</a></li>
+            </ul>
+          </li>
+          <li><a href="https://www.youtube.com/">link4</a></li>
+          <li><a href="https://validator.w3.org/">link5</a></li>
+          <li><a href="#">link6</a></li>
+        </ul>
+        <p> Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Dolore, accusamus.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="right">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
